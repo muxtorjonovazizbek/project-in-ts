@@ -11,7 +11,7 @@ const { Header, Sider, Content } = Layout;
 
 const Index = () => {
   const [collapsed, setCollapsed] = useState<boolean>(false);
-  const [selectedKeys, setSelectedKeys] = useState<string | undefined>(undefined)
+  const [selectedKeys, setSelectedKeys] = useState<string>("0")
   const {pathname} = useLocation()
   console.log(pathname);
 
