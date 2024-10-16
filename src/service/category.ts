@@ -11,9 +11,3 @@ const category: CategoryRequest = {
 export default category
 
 
-export interface CategoryType {
-    id:number;
-    name:string;
-    createdAt?:string;
-    lastUpdatedAt?:string;
-}

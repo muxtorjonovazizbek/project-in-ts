@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { category } from '@service';
 import { GlobalTable, ConfirmDelete } from "@components";
 import { Category } from '@modal';
-import { CategoryType } from '../../service/category';
+import { CategoryType } from '@types';
 
 
 interface ParamsType {

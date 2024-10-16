@@ -1,6 +1,6 @@
 // ========================= Auth ============================
 
-import { CategoryType } from "../service/category"
+
 
  
 
@@ -32,8 +32,14 @@ export interface SignUp extends SignIn {
         limit: number,
         page: number
     }
+    
 
-
+    export interface CategoryType {
+        id:number;
+        name:string;
+        createdAt?:string;
+        lastUpdatedAt?:string;
+    }
 
     export interface CategoryRequest {
         create: (data: CategoryType)=> Promise<any>,
@@ -41,3 +47,28 @@ export interface SignUp extends SignIn {
         update: (id: number, data:CategoryType)=> Promise<any>,
         delete: (id: number)=> Promise<any>,
     }
+
+
+// ===================== Brands ==================
+ 
+
+export interface GetBrands {
+    search: string, 
+    limit: number,
+    page: number
+}
+
+
+export interface BrandsType {
+    id:number;
+    name:string;
+    createdAt?:string;
+    lastUpdatedAt?:string;
+}
+
+export interface BrandsRequest {
+    create: (data: BrandsType)=> Promise<any>,
+    get: (params: GetBrands)=> Promise<any>,
+    update: (id: number, data:BrandsType)=> Promise<any>,
+    delete: (id: number)=> Promise<any>,
+}
